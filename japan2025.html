@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japan 2025 – Mat, Onsen & Ljus</title>
+    <style>
+        :root{
+            --accent:#c8102e;
+            --bg:#fffaf8;
+            --card:#ffffff;
+            --muted:#666;
+        }
+        html,body{margin:0;padding:0;background:var(--bg);color:#222;font-family:system-ui,-apple-system,"Inter","Helvetica Neue",Arial,sans-serif;line-height:1.7}
+        header{background:linear-gradient(135deg,#c8102e,#8a0d21);color:#fff;padding:1.8rem 1rem;text-align:center}
+        h1{margin:0 0 .25rem 0;font-size:1.9rem}
+        h2{margin:2rem 0 1rem 0;border-left:4px solid var(--accent);padding-left:.6rem}
+        h3{margin:1.4rem 0 .4rem 0;color:var(--accent)}
+        section{max-width:900px;margin:1rem auto;background:var(--card);padding:1.2rem 1.4rem;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+        p,li{font-size:1rem}
+        ul{margin:.25rem 0 1rem 1.25rem}
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+        .meta{color:var(--muted);font-size:.95rem}
+        .photo{margin:.6rem 0}
+        .photo img{width:100%;border-radius:10px;display:block}
+        .tag{display:inline-block;background:#fce9ec;color:#a70d25;border:1px solid #f6c7cf;padding:.15rem .5rem;border-radius:999px;font-size:.85rem;margin:.15rem .25rem 0 0}
+        .note{background:#fff2d9;border:1px solid #ffd899;border-radius:10px;padding:.7rem .9rem;margin:.8rem 0}
+        .pill{display:inline-block;background:#eef3ff;color:#2441c5;padding:.15rem .45rem;border-radius:999px;font-size:.8rem;margin-left:.4rem}
+        .divider{height:1px;background:#eee;margin:1.2rem 0}
+        .small{font-size:.95rem;color:#444}
+        footer{max-width:900px;margin:2rem auto 4rem auto;text-align:center;color:#777}
+        /* icons spacing */
+        .icon{margin-right:.35rem}
+        /* mobile */
+        @media (max-width:640px){
+            section{margin:.75rem .5rem}
+        }
+
+        /* Print optimization */
+        @media print {
+            nav { display: none; }
+            header { background: none; color: #000; }
+            a { color: #000; text-decoration: none; }
+            .note { border: 1px solid #ccc; background: #f8f8f8; }
+            body { background: #fff; color: #000; font-size: 11pt; line-height: 1.6; margin: 1.5cm; }
+            img { page-break-inside: avoid; }
+            section { box-shadow: none; border: 1px solid #ddd; }
+            section { page-break-before: always; }
+            section:first-of-type { page-break-before: auto; }
+        }
+    </style>
+    <script>
+        // Om en bild inte kan laddas → ersätt med neutral placeholder
+        function setFallback(img){
+            if(!img.dataset.tried){
+                img.dataset.tried = true;
+                img.src = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
+            }
+        }
+        // Öppna kartlänk i ny flik (lite säkrare på mobil)
+        function openMap(url){
+            window.open(url, "_blank", "noopener,noreferrer");
+        }
+    </script>
+</head>
+<body>
+
+
+
+<header>
+    <h1>Japan 2025 – Mat, Onsen & Ljus</h1>
+    <div class="meta" style="color:#fff;">Tokyo → Osaka → Kinosaki → Kobe → Hiroshima → Matsuyama → Tokyo • 24 nov – 9 dec 2025</div>
+</header>
+<nav style="background:#fff;padding:.8rem 1rem;text-align:center;border-bottom:1px solid #eee;">
+  <a href="#tokyo">Tokyo</a> •
+  <a href="#osaka">Osaka</a> •
+  <a href="#kinosaki">Kinosaki</a> •
+  <a href="#kobe">Kobe</a> •
+  <a href="#hiroshima">Hiroshima</a> •
+  <a href="#matsuyama">Matsuyama</a> •
+  <a href="#praktiskt">Praktiskt</a> •
+  <a href="#summary">Tips</a>
+</nav>
+
+<section id="phrases">
+    <h2>🗣️ Nytt & användbara fraser</h2>
+    <p>Mycket har moderniserats i Japan sedan 2018 – fler använder nu kortbetalning, fler skyltar är på engelska och onsen-städer har blivit mer öppna för tatueringar. Digitala betalningar (Suica i mobilen, PayPay, etc.) är vanliga, men kontanter behövs fortfarande på landsbygden. Här är några användbara fraser för resan – skrivna med enkel svensk fonetik.</p>
+    <table style="width:100%;border-collapse:collapse;font-size:.95rem;">
+        <tr><th style="text-align:left;">Japanska</th><th style="text-align:left;">Svensk fonetik</th><th style="text-align:left;">Betydelse</th></tr>
+        <tr><td>こんにちは</td><td>kon-nit-chi-va</td><td>Hej / God dag</td></tr>
+        <tr><td>おはようございます</td><td>o-ha-jå go-zai-mas</td><td>God morgon</td></tr>
+        <tr><td>こんばんは</td><td>kon-ban-va</td><td>God kväll</td></tr>
+        <tr><td>ありがとう</td><td>a-ri-ga-tå</td><td>Tack</td></tr>
+        <tr><td>ありがとうございます</td><td>a-ri-ga-tå go-zai-mas</td><td>Tack så mycket (artigt)</td></tr>
+        <tr><td>すみません</td><td>su-mi-ma-sen</td><td>Ursäkta / förlåt / hallå (för att få uppmärksamhet)</td></tr>
+        <tr><td>はい</td><td>hai</td><td>Ja</td></tr>
+        <tr><td>いいえ</td><td>i-ee</td><td>Nej</td></tr>
+        <tr><td>お願いします</td><td>o-ne-ga-i shi-mas</td><td>Snälla / jag ber dig</td></tr>
+        <tr><td>いくらですか？</td><td>i-ku-ra de-ska</td><td>Hur mycket kostar det?</td></tr>
+        <tr><td>これください</td><td>ko-re ku-da-sai</td><td>Jag tar den här (i butik/restaurang)</td></tr>
+        <tr><td>おいしいです！</td><td>oi-shi-des</td><td>Det är gott!</td></tr>
+        <tr><td>ごちそうさまでした</td><td>go-chi-så-sa-ma-de-sh-ta</td><td>Tack för maten</td></tr>
+        <tr><td>トイレはどこですか？</td><td>toj-re va do-ko de-ska</td><td>Var är toaletten?</td></tr>
+        <tr><td>駅はどこですか？</td><td>e-ki va do-ko de-ska</td><td>Var är tågstationen?</td></tr>
+        <tr><td>助けてください！</td><td>ta-su-ke-te ku-da-sai</td><td>Hjälp mig!</td></tr>
+        <tr><td>写真を撮ってもいいですか？</td><td>sha-shin o to-te mo i-des-ka</td><td>Får jag ta ett foto?</td></tr>
+        <tr><td>英語が話せますか？</td><td>e-go ga ha-na-se-mas-ka</td><td>Talar du engelska?</td></tr>
+        <tr><td>大丈夫です</td><td>dai-jå-bo-des</td><td>Det är okej / ingen fara</td></tr>
+        <tr><td>乾杯！</td><td>kan-pai</td><td>Skål!</td></tr>
+        <tr><td>どこで食べますか？</td><td>do-ko de ta-be-mas-ka</td><td>Var kan vi äta?</td></tr>
+        <tr><td>美味しいラーメン屋はどこですか？</td><td>oi-shii ra-men-ja va do-ko de-ska</td><td>Var finns en bra ramenrestaurang?</td></tr>
+        <tr><td>温泉はどこですか？</td><td>on-sen va do-ko de-ska</td><td>Var är badet / onsen?</td></tr>
+        <tr><td>さようなら</td><td>sa-jo-na-ra</td><td>Hej då</td></tr>
+    </table>
+</section>
+
+<section id="climate">
+  <h2>🌤️ Klimat & säsong</h2>
+  <p>I november–december är Japan svalare men ofta klart och soligt. I Tokyo och Osaka ligger dagstemperaturen runt 10–15 °C, med kyliga kvällar kring 5 °C. Kinosaki och Hiroshima är något svalare, särskilt nattetid. Ta med lager på lager, tunn jacka och varma strumpor för onsenkvällarna.</p>
+  <p>Fördelar med säsongen: mindre turister, vackra vinterilluminationer, krabbsäsong i Kinosaki och extra mysig atmosfär i onsenstäderna.</p>
+</section>
+
+<section id="overview">
+    <h2>🗺️ Översikt & datum</h2>
+    <p>Här är hela resplanen i korthet, perfekt som snabb översikt eller när du vill hitta vilket hotell ni bodde på var:</p>
+    <table style="width:100%;border-collapse:collapse;font-size:.95rem;">
+        <tr><th style="text-align:left;">Datum</th><th style="text-align:left;">Plats</th><th style="text-align:left;">Hotell</th></tr>
+        <tr><td>24–26 nov</td><td>Tokyo</td><td>Tokyo Asia Center of Japan</td></tr>
+        <tr><td>28–29 nov</td><td>Osaka</td><td>New Osaka Hotel Shinsaibashi</td></tr>
+        <tr><td>30 nov</td><td>Kinosaki</td><td>Koyado Inn</td></tr>
+        <tr><td>1 dec</td><td>Kobe</td><td>Harborland Hotel</td></tr>
+        <tr><td>2–4 dec</td><td>Hiroshima</td><td>Hiroshima Washington Hotel</td></tr>
+        <tr><td>5–6 dec</td><td>Matsuyama</td><td>Dōgo Onsen Hotel</td></tr>
+        <tr><td>7–8 dec</td><td>Tokyo</td><td>Sotetsu Fresa Inn Shinjuku</td></tr>
+    </table>
+</section>
+
+<section id="intro">
+    <h2>1️⃣ Inledning</h2>
+    <p>En handplockad guide genom Japans vintersäsong med fokus på <span class="tag">🍣 mat</span><span class="tag">🍺 öl & sake</span><span class="tag">♨️ onsen</span><span class="tag">✨ ljusshower</span><span class="tag">🎮 retro</span><span class="tag">🎶 nattliv</span>. Allt i ett <em>flödande resekapitel</em> utan menyer, så du kan läsa från början till slut som en liten bok.</p>
+    <div class="photo">
+        <img
+            src="https://resorglobal.se/wp-content/uploads/2025/01/RG_Japan_karta-1024x576.jpg"
+            alt="Karta som visar resvägen mellan Tokyo, Osaka, Hiroshima och Matsuyama"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Karta som visar resvägen mellan Tokyo, Osaka, Hiroshima och Matsuyama</p>
+    </div>
+    <div class="note">💡 Tips: alla platser har <b>Google Maps-länkar</b> (sök-URI) som öppnas direkt i en ny flik och brukar fungera både på mobil och dator.</div>
+</section>
+
+<section id="highlights">
+  <h2>🌟 Resans höjdpunkter i korthet</h2>
+  <ul>
+    <li>🌃 <b>Största wow-ögonblick:</b> teamLab Borderless, Dōgo Onsen, Miyajima Shrine.</li>
+    <li>🍣 <b>Bästa maten:</b> Kobe-biff, Takoyaki, Ramen Tsuta & Nagata-ya okonomiyaki.</li>
+    <li>🍶 <b>Bästa sakeupplevelse:</b> Hakutsuru Sake Museum i Kobe.</li>
+    <li>♨️ <b>Mest avkopplande plats:</b> kvällspromenaden i Kinosaki Onsen.</li>
+    <li>🎶 <b>Bästa nattliv:</b> CIRCUS Osaka & Golden Gai Tokyo.</li>
+  </ul>
+  <div class="note">💡 Denna resa kombinerar mat, kultur, musik och avslappning – med perfekt balans mellan storstad och lugn onsenmiljö.</div>
+</section>
+
+<!-- TOKYO -->
+<section id="tokyo">
+    <h2>🗼 Tokyo (24–26 nov, 7–8 dec)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Asia+Center+of+Japan" target="_blank" rel="noopener">Tokyo Asia Center of Japan</a> • <a href="https://www.google.com/maps/search/?api=1&query=Sotetsu+Fresa+Inn+Shinjuku" target="_blank" rel="noopener">Sotetsu Fresa Inn Shinjuku</a> <span class="pill">centralt</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Tokyo, tidigare känd som Edo, växte snabbt från en liten fiskeby till ett av världens mest inflytelserika urbana centra. Under Edo-perioden (1603–1868) blev staden shogunatets maktcentrum och växte till en av världens största städer. Meiji-restaurationen 1868 gjorde Tokyo till kejsarens officiella säte och inledde en period av snabb modernisering och västerländska influenser. Efter andra världskriget återuppbyggdes Tokyo i rasande takt och blev symbol för det japanska ekonomiska undret under efterkrigstiden, med skyskrapor, tunnelbanor och teknikjättar. Idag är Tokyo känt som en global metropol för teknik, popkultur, mode och mat – där futuristiska stadsdelar, innovativa restauranger och traditionella tempel samexisterar. Staden är ett epicentrum för allt från anime och gaming till Michelin-restauranger och världsledande design.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Tokyo har fler Michelinstjärnor än någon annan stad i världen.</li>
+            <li>Namnet “Edo” betyder “flodmynning”.</li>
+            <li>Tokyo Tower inspirerades av Eiffeltornet och är faktiskt högre.</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li>Roppongi Hills <a href="https://www.google.com/maps/search/?api=1&query=Roppongi+Hills+Illumination" target="_blank" rel="noopener">Keyakizaka Illumination</a> – ikoniska blåtonade ljus med Tokyo Tower i fonden.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=teamLab+Borderless+Azabudai+Hills" target="_blank" rel="noopener">teamLab Borderless</a> – ♾️ rörliga, interaktiva ljusverk där rummen “pratar” med varandra. Gå i bekväma kläder, gärna mörka för bättre reflektioner.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Toyosu+Fish+Market" target="_blank" rel="noopener">Toyosu Market</a> – modern ersättare till Tsukiji; perfekt för sushi-frukost.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Kväll efter 17 när Tokyo Tower börjar lysa. Mindre folk vardagar.</div>
+
+    <h3>🍣 Mat & 🍺 dryck</h3>
+    <p>Tokyo är världens största matscen – från hål-i-väggen-ramen till fine dining i världsklass. Här hittar du allt från klassisk sushi till trendig fusion och izakaya-kultur. Nedan några av Tokyos bästa matupplevelser:</p>
+    <ul>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Harajuku+Gyoza+Lou+Tokyo" target="_blank" rel="noopener">Gyoza Lou</a></b> – populärt gyoza-ställe i Harajuku, kända för sina saftiga dumplings och snabba service.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Ohsho+Tokyo" target="_blank" rel="noopener">Osaka Ohsho</a></b> – kedja från Kansai som gör krispiga gyoza med perfekt balans mellan vitlök och kött.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ichiran+Ramen+Tokyo" target="_blank" rel="noopener">Ichiran Ramen</a></b> – ikonisk kedja där du äter i egna bås, perfekt nattmat.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Tempura+Kondo+Tokyo" target="_blank" rel="noopener">Tempura Kondo</a></b> – tempura på Michelin-nivå i Ginza.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Afuri+Ramen+Tokyo" target="_blank" rel="noopener">Afuri Ramen</a></b> – fräsch yuzu-ramen med citrusarom.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Tsuta+Ramen+Tokyo" target="_blank" rel="noopener">Tsuta Ramen</a></b> – världens första Michelin-stjärnade ramen (soba-style med tryffelolja).</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Nakiryu+Ramen+Tokyo" target="_blank" rel="noopener">Nakiryu</a></b> – Michelin-ramen med len tantanmen (sesam & chili).</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Mensho+Tokyo+Ramen" target="_blank" rel="noopener">Mensho Tokyo</a></b> – innovativ ramen med lamm & rökt soja.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Izakaya+Uoshin+Nogizaka+Tokyo" target="_blank" rel="noopener">Izakaya Uoshin Nogizaka</a></b> – genuin fisk-izakaya i Aoyama.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Narisawa+Tokyo" target="_blank" rel="noopener">Narisawa</a></b> – banbrytande fine dining som hyllar japanska säsonger.</li>
+    </ul>
+    <p>Tokyo är platsen för matäventyr. Här hittar du världens största variation och kvalitet – från snabbnudlar till stjärnkrogar.</p>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Sushi-frukost tidigt morgon (Toyosu), izakaya & öl efter 18.</div>
+
+    <h3>🛍️ Shopping & fynd</h3>
+    <ul>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Akihabara+Electronics+District" target="_blank" rel="noopener">Akihabara</a> – elektronik, retrospel, Ghibli & animebutiker i varje hörn.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+PARCO+Nintendo+Store" target="_blank" rel="noopener">Nintendo TOKYO</a> – officiell butik i Shibuya PARCO.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Store+Tokyo+Donguri+Republic" target="_blank" rel="noopener">Donguri Republic</a> – Ghibli-butik med exklusiva figurer & heminredning.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Pok%C3%A9mon+Center+Shibuya" target="_blank" rel="noopener">Pokémon Center Shibuya</a> – enorm butik med samlarobjekt & plushies.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Kappabashi+Kitchen+Street+Tokyo" target="_blank" rel="noopener">Kappabashi-dori</a> – “kökens Mecka”, full av japanska knivar, porslin & plastmat!</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Shinjuku" target="_blank" rel="noopener">Bic Camera Shinjuku</a> – teknik, kikare, Makita-verktyg & allt mellan himmel och jord.</li>
+    </ul>
+
+    <h3>🛍️ Retro & T-shirts</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Super+Potato+Akihabara" target="_blank" rel="noopener">Super Potato</a> – retrospel & liten arcade.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Nakano+Broadway" target="_blank" rel="noopener">Nakano Broadway</a> – Mandarake, samlarprylar, Ghibli-grejer.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Nintendo+Tokyo+Shibuya+PARCO" target="_blank" rel="noopener">Nintendo TOKYO (Shibuya PARCO)</a> – officiell butik.</li>
+    </ul>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Gör en dagsutflykt till <a href="https://www.google.com/maps/search/?api=1&query=Kamakura" target="_blank" rel="noopener">Kamakura</a> för stora Buddhan eller <a href="https://www.google.com/maps/search/?api=1&query=Nikko" target="_blank" rel="noopener">Nikkō</a> för tempel i bergen.
+    </div>
+
+    <div class="photo">
+        <img
+            src="https://omotenashi-guide.com/wp-content/uploads/2017/05/a3c2f2108afaa6f7692ed8e15270263a.jpg"
+            alt="Bästa? maten i Tokyo"
+            loading="lazy"f
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Bästa maten i Tokyo?</p>
+    </div>
+    <div class="photo">
+        <img
+            src="https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2024-08/keyakizaka-illumination-guide_4.jpg"
+            alt="Roppongi Hills illumination Tokyo"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Roppongi Hills illumination Tokyo</p>
+    </div>
+    <div class="divider"></div>
+</section>
+
+<!-- OSAKA -->
+<section id="osaka">
+    <h2>🧧 Osaka (28–29 nov)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=New+Osaka+Hotel+Shinsaibashi" target="_blank" rel="noopener">New Osaka Hotel Shinsaibashi</a> <span class="pill">nära nattliv</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Osaka har i över tusen år varit Japans kommersiella hjärta och kallades ofta “nationens kök” tack vare sin roll som handelscentrum för ris och varor under Edo-perioden. Staden utvecklade en stark köpmannakultur, där affärssinne och öppenhet har satt prägel på invånarnas attityd. Osaka är också känd för sitt distinkta Kansai-dialekt (Osaka-ben), sin varma, humoristiska och jordnära befolkning samt sin rika mattradition – särskilt <em>konamon</em> (mjölbaserad comfort food) som okonomiyaki och takoyaki. Idag är Osaka berömd för sin street food, sitt avslappnade nattliv, sin stand-up-humor (manzai), och sin vänliga, lättsamma atmosfär – ofta i kontrast till Tokyo.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Osaka-dialekten (Osaka-ben) används ofta i japansk humor och tv.</li>
+            <li>Staden har en underjordisk shoppingstad som sträcker sig flera kilometer.</li>
+            <li>Uttrycket “Kuidaore” betyder “att äta sig till ruinens brant” – ett typiskt Osaka-ordspråk!</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Osaka" target="_blank" rel="noopener">Dotonbori</a> – neon, gatumat och kanalpuls.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Festival+of+Lights+Midosuji" target="_blank" rel="noopener">Festival of Lights (Midosuji)</a> – vinterillumination.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=teamLab+Botanical+Garden+Osaka" target="_blank" rel="noopener">teamLab Botanical Garden</a> – digital konst bland träd och dammar.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Kväll 18–22 då neonskyltarna reflekteras i vattnet.</div>
+
+    <h3>🍣 Mat & 🍺 dryck</h3>
+    <p>Osaka kallas “Japans kök” – staden där streetfood, värme och humor möts. Här föddes okonomiyaki, takoyaki och kushikatsu, och maten handlar alltid om glädje och gemenskap. På kvällarna doftar det grill, sås och smör, och varje kvarter bjuder på nya smakäventyr.</p>
+    <ul>
+        <li><b>Okonomiyaki</b> – “japansk pizza” med kål, fläsk och sås; prova <a href="https://www.google.com/maps/search/?api=1&query=Mizuno+Okonomiyaki+Osaka" target="_blank" rel="noopener">Mizuno</a> i Dotonbori.</li>
+        <li><b>Takoyaki</b> – bläckfiskbollar toppade med majonnäs och bonito, bäst hos <a href="https://www.google.com/maps/search/?api=1&query=Kukuru+Takoyaki+Osaka" target="_blank" rel="noopener">Kukuru</a>.</li>
+        <li><b>Kushikatsu</b> – friterade spett; ät på <a href="https://www.google.com/maps/search/?api=1&query=Kushikatsu+Daruma+Shinsekai" target="_blank" rel="noopener">Daruma</a>.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Yakiniku+M+Dotonbori+Osaka" target="_blank" rel="noopener">Yakiniku M Dotonbori</a></b> – grillat wagyu-kött med utsikt över kanalen.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ajinoya+Osaka" target="_blank" rel="noopener">Ajinoya</a></b> – klassisk okonomiyaki nära Namba med hemlig sås.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Hozenji+Yokocho+Osaka" target="_blank" rel="noopener">Hozenji Yokocho</a></b> – smal gränd fylld av små izakaya med autentisk Kansai-stämning.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Beer+Belly+Nakanoshima+Osaka" target="_blank" rel="noopener">Beer Belly</a></b> – lokalbryggeri i Nakanoshima med egen Minoh Beer.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Sennariya+Coffee+Osaka" target="_blank" rel="noopener">Sennariya Coffee</a></b> – retro kissaten med 60-talsstil och japansk frukost.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Human+Beings+Everybody+Noodle+Osaka" target="_blank" rel="noopener">Human Beings Everybody Noodle</a></b> – kreativa bowls med säsongsbetonade ingredienser och stark lokal följarskara.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ramen+Yashichi+Osaka" target="_blank" rel="noopener">Ramen Yashichi</a></b> – exklusiv shoyu-ramen med djup smak, ofta köbildning redan vid öppning.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Hanamaruken+Namba+Osaka" target="_blank" rel="noopener">Hanamaruken Namba</a></b> – känd för sin mjukt långkokta “Happiness Ramen”.</li>
+    </ul>
+
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Kväll, särskilt efter 19 när gatumaten och barerna vaknar till liv.</div>
+
+    <h3>🛍️ Shopping & fynd</h3>
+    <ul>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Den+Den+Town+Osaka" target="_blank" rel="noopener">Den Den Town</a> – Osakas svar på Akihabara, retrospel & teknik.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Namba+Parks" target="_blank" rel="noopener">Namba Parks</a> – shoppingkomplex med trädgårdar på taket.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi+Shopping+Arcade" target="_blank" rel="noopener">Shinsaibashi-suji</a> – över 600 meter täckt shoppinggata med allt från streetwear till traditionellt hantverk.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Makita+Pro+Center+Osaka" target="_blank" rel="noopener">Makita Pro Center</a> – japanska elverktyg & hantverksshop.</li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Namba" target="_blank" rel="noopener">Bic Camera Namba</a> – allt inom teknik, kameror & tillbehör.</li>
+    </ul>
+
+    <h3>🎶 Klubbar</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=CIRCUS+Osaka" target="_blank" rel="noopener">CIRCUS Osaka</a> – techno/bass.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Club+JOULE+Osaka" target="_blank" rel="noopener">Club JOULE</a> – stor klubb i Amerikamura.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Compufunk+Records+Osaka" target="_blank" rel="noopener">Compufunk Records</a> – skivbutik + danstillfällen.</li>
+    </ul>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Ta tåget till <a href="https://www.google.com/maps/search/?api=1&query=Nara+Deer+Park" target="_blank" rel="noopener">Nara</a> för att mata hjortar vid templen eller till <a href="https://www.google.com/maps/search/?api=1&query=Himeji+Castle" target="_blank" rel="noopener">Himeji</a> för Japans vackraste slott.
+    </div>
+
+    <h3>🎧 Event 28–29 nov 2025 (Osaka)</h3>
+    <ul>
+      <li><b><a href="https://www.google.com/search?q=CIRCUS+Osaka+schedule" target="_blank" rel="noopener">CIRCUS Osaka – aktuellt schema</a></b> — techno/house m.m. Ofta gäst-DJs från Europa/Japan.</li>
+      <li><b><a href="https://www.google.com/search?q=Club+JOULE+Osaka+schedule" target="_blank" rel="noopener">Club JOULE – kommande events</a></b> — stor klubb i Amerikamura, flera golv.</li>
+      <li><b><a href="https://www.google.com/search?q=Compufunk+Records+Osaka+events" target="_blank" rel="noopener">Compufunk Records – event & pop-ups</a></b> — intimt dansgolv och skivbutik.</li>
+      <li><b><a href="https://www.google.com/search?q=Osaka+techno+events+Nov+2025+Resident+Advisor" target="_blank" rel="noopener">Resident Advisor – Osaka</a></b> — kuraterade listor för samma datum.</li>
+      <li><b><a href="https://www.google.com/search?q=Osaka+club+events+Nov+2025+Zaiko" target="_blank" rel="noopener">Zaiko</a></b> & <b><a href="https://www.google.com/search?q=Osaka+club+tickets+ePlus" target="_blank" rel="noopener">e+</a></b> — biljetter/förköp.</li>
+    </ul>
+    <div class="note"><b>ℹ️ Tips:</b> Lineups släpps ofta 1–3 veckor innan. För de här datumen (28–29 nov) brukar klubbarna köra internationella bokningar på fredagar; köp gärna förköp och ta med ID.</div>
+
+    <div class="photo">
+        <img
+            src="https://onb-cdn.b-cdn.net/images-stn-osaka/118-Dotonbori-Area-Osaka1.jpg"
+            alt="Dotonbori-kanalen med neonljus och folkvimmel i Osaka"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Dotonbori-kanalen med neonljus och folkvimmel i Osaka</p>
+    </div>
+    <div class="photo">
+        <img
+            src="https://media.istockphoto.com/id/1287231499/photo/night-view-at-dotonbori.jpg?s=612x612&w=0&k=20&c=0hInxh6dAYqwUtdaV_veLDhHxibgkmU1ArVHuFkHcRA="
+            alt="Dotonbori nightlife and neon lights"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Dotonbori nightlife and neon lights</p>
+    </div>
+    <div class="divider"></div>
+</section>
+
+<!-- KINOSAKI -->
+<section id="kinosaki">
+    <h2>♨️ Kinosaki (30 nov)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=Koyado+Inn+Kinosaki" target="_blank" rel="noopener">Koyado Inn</a> (Kinosaki) <span class="pill">onsen-gata</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Kinosaki Onsen har en över 1300-årig historia och omnämns i texter från 700-talet. Orten växte fram kring varma källor och kopplas till buddhistiska helandetraditioner; enligt legenden blev en skadad häger frisk i källvattnet – därför syns ofta hägern i stadens symboler. Genom seklerna har Kinosaki lockat pilgrimer, konstnärer och författare, bland annat Nobelpristagaren Shiga Naoya som skrev om orten. Kinosaki är idag känt som en av Japans mest pittoreska onsenstäder med sju historiska bad, vackra kanaler och en unik atmosfär där besökare går mellan baden i yukata. Orten är synonym med avkoppling, tradition och naturskönhet.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Orten har sju officiella badhus, var och en med sin egen historia och charm.</li>
+            <li>Besökare går traditionellt mellan baden i yukata (lätt kimono) och trätofflor.</li>
+            <li>Kinosaki är känd för sin lugna, bilfria atmosfär och pittoreska kvällsbelysning.</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li>Yumepa-pass & de sju baden – gå i <em>yukata</em> & <em>geta</em> mellan baden.</li>
+        <li>Flodpromenad i kvällsljus (perfekt efter middag).</li>
+        <li><b>Matsuba-gani</b> (snökrabba, nov–mars) – fråga ryokan om krabbmeny.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Sen eftermiddag – perfekt efter en dagsutflykt innan middag.</div>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Utforska <a href="https://www.google.com/maps/search/?api=1&query=Takeno+Beach" target="_blank" rel="noopener">Takeno-stranden</a> (sommar) eller <a href="https://www.google.com/maps/search/?api=1&query=Genbudo+Caves" target="_blank" rel="noopener">Genbudo-grottorna</a>.
+    </div>
+
+    <h3>🍣 Mat & 🍶 sake</h3>
+    <p>Kinosaki är känd för färsk krabba, säsongsbaserad kaiseki och små onsen-restauranger som serverar lokala delikatesser. Här handlar matupplevelsen om avkoppling och harmoni – ofta iklädd yukata på ryokan.</p>
+    <ul>
+      <li><b>Matsuba-gani</b> – snökrabba, symbol för vinter i Kinosaki. Serveras som sashimi, grillad eller i nabe (gryta).</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ryokan+Ginka+Kinosaki" target="_blank" rel="noopener">Ryokan Ginka</a></b> – traditionell kaiseki-middag med lokala råvaror.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Kinosaki+Brewpub" target="_blank" rel="noopener">Kinosaki Brewpub</a></b> – lokal öl & snacks vid kanalen.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Sanpou+Nishimuraya+Kinosaki" target="_blank" rel="noopener">Sanpou Nishimuraya</a></b> – modern tolkning av kaiseki.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Chitose+Sushi+Kinosaki" target="_blank" rel="noopener">Chitose Sushi</a></b> – liten men hyllad sushibar nära stationen.</li>
+    </ul>
+    <p>Kinosakis matkultur präglas av säsong, lugn och lyx i det enkla – ett måste för den som älskar havsmat och japansk estetik.</p>
+
+    <div class="photo">
+        <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/98/18/62/caption.jpg?w=900&h=500&s=1"
+            alt="Kvällspromenad längs kanalen i Kinosaki Onsen"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Kvällspromenad längs kanalen i Kinosaki Onsen</p>
+    </div>
+    <div class="photo">
+        <img
+            src="https://visitkinosaki.com/vkcore/wp-content/uploads/2023/05/75225d4a35ba05c0f362e1aca78fea5b.jpg"
+            alt="Evening canal view in Kinosaki Onsen"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+    </div>
+    <div class="photo">
+        <img
+                src="https://www.foodinjapan.org/wp-content/uploads/2025/02/mm5084.jpg"
+                loading="lazy"
+                onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Matsuba-gani (snökrabba)</p>
+    </div>
+
+
+    <div class="divider"></div>
+</section>
+
+<!-- KOBE -->
+<section id="kobe">
+    <h2>⚓ Kobe (1 dec)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=Kobe+Harborland+Hotel" target="_blank" rel="noopener">(valfritt hotell)</a> – nära Harborland <span class="pill">hamnvy</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Kobe öppnades som en av Japans första internationella hamnar 1868, vilket snabbt gav staden en kosmopolitisk prägel med västerländska kvarter, kyrkor och butiker. Stadens eleganta stadsdelar och dramatiska läge mellan berg och hav har länge lockat både affärsresenärer och konstnärer. 1995 drabbades Kobe av den förödande Hanshin-jordbävningen, men återuppbyggnaden blev ett exempel på motståndskraft och modern stadsplanering. Idag är Kobe känt för sin internationella atmosfär, design- och modescen, kaféer och gourmetmat (inte minst Kobe-biff). Staden har en image av lyxigt och bekvämt stadsliv, där internationell hamnpuls möter japansk elegans.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Kobe var en av de första städerna i Japan att få elbelysning (1890).</li>
+            <li>Kobe-biffen kommer från särskilt uppfödda Tajima-gyu-kor med strikt släktlinje.</li>
+            <li>Efter jordbävningen 1995 byggdes mycket av staden upp igen på bara två år.</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Kobe+Harborland" target="_blank" rel="noopener">Harborland</a> – kvällsvy, restauranger & caféer.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Hakutsuru+Sake+Brewery+Museum" target="_blank" rel="noopener">Hakutsuru Sake Museum</a> – sakehistoria & provning.</li>
+        <li>Ät <b>Kobe-biff</b> hos <a href="https://www.google.com/maps/search/?api=1&query=Mouriya+Kobe" target="_blank" rel="noopener">Mouriya</a> eller <a href="https://www.google.com/maps/search/?api=1&query=Wakkoqu+Kobe" target="_blank" rel="noopener">Wakkoqu</a>.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Tidigt kvällsljus i hamnen innan middag.</div>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Ta linbanan till <a href="https://www.google.com/maps/search/?api=1&query=Nunobiki+Herb+Garden+Kobe" target="_blank" rel="noopener">Nunobiki Herb Garden</a> eller en färja till <a href="https://www.google.com/maps/search/?api=1&query=Awaji+Island" target="_blank" rel="noopener">Awaji Island</a> med vacker kust och trädgårdar.
+    </div>
+    <h3>🍣 Mat & 🍺 dryck</h3>
+    <p>Kobe är synonymt med elegans och kött i världsklass – men också för sin rika cafétradition, internationella influenser och sakebryggerier i Nada-distriktet.</p>
+    <ul>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Steakland+Kobe" target="_blank" rel="noopener">Steakland Kobe</a></b> – prisvärd wagyu-upplevelse nära stationen.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=La+Shomon+Kobe" target="_blank" rel="noopener">La Shomon</a></b> – yakiniku med fokus på premiumkött.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Concerto+Dining+Cruise+Kobe" target="_blank" rel="noopener">Concerto Dining Cruise</a></b> – middag på båt med utsikt över hamnen.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Nishimura+Coffee+Kobe" target="_blank" rel="noopener">Nishimura Coffee</a></b> – klassiskt café med retro charm.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ishida+Kobe+Beef" target="_blank" rel="noopener">Ishida Kobe Beef</a></b> – exklusiv biffrestaurang i Kitano.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Hakutsuru+Sake+Brewery+Museum" target="_blank" rel="noopener">Hakutsuru Sake Brewery Museum</a></b> – sakeprovning och historia i Nada-distriktet.</li>
+        <li><b><a href="https://www.google.com/maps/search/?api=1&query=Hyotan+Gyoza+Kobe" target="_blank" rel="noopener">Hyotan Gyoza</a></b> – legendarisk gyozabar i Sannomiya sedan 1957, serverar med unik sojasås & chiliolja.</li>
+    </ul>
+
+    <div class="photo">
+        <img
+            src="https://www.swedishnomad.com/wp-content/images/2019/08/Kobe-Beef.jpg"
+            alt="Kobe-biff serverad på restaurang i Kobe"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Kobe-biff serverad på restaurang i Kobe</p>
+    </div>
+    <div class="divider"></div>
+</section>
+
+<!-- HIROSHIMA -->
+<section id="hiroshima">
+    <h2>🕊️ Hiroshima (2–4 dec)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=Hiroshima+Washington+Hotel" target="_blank" rel="noopener">Hiroshima Washington Hotel</a> <span class="pill">mitt i smeten</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Hiroshima grundades som borgstad 1589 och växte till regionalt maktcentrum. Efter atombombens förödelse 1945 blev Hiroshima symbol för fred och återuppbyggnad. Staden har målmedvetet återuppstått med breda gröna avenyer, modern arkitektur och ett starkt fokus på fredsarbete. Hiroshima Peace Memorial Park och museet lockar besökare från hela världen, och staden är idag ett centrum för utbildning, teknik och industri. Samtidigt har Hiroshima ett pulserande nattliv, särskilt runt Nagarekawa, och är känd för sitt kök, inklusive okonomiyaki och ostron. Hiroshima är ett levande bevis på mänsklig motståndskraft och hopp.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Staden har över 1 200 körsbärsträd i Peace Park – symboler för hopp och återfödelse.</li>
+            <li>Hiroshima-stilen av okonomiyaki uppstod efter kriget, som ett sätt att dryga ut maten.</li>
+            <li>Den röda baseballhatten tillhör Hiroshima Toyo Carp – en lokal stolthet.</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Hiroshima+Peace+Memorial+Park" target="_blank" rel="noopener">Peace Memorial Park & Museum</a> – tid & eftertanke.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Hiroshima+Dreamination+Illumination" target="_blank" rel="noopener">Hiroshima Dreamination</a> – vinterljus längs Peace Boulevard.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Miyajima+Itsukushima+Shrine" target="_blank" rel="noopener">Miyajima</a> – “flytande” torii-port, vacker kvällstid.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Sen eftermiddag till skymning för Peace Park och Dreamination.</div>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Besök <a href="https://www.google.com/maps/search/?api=1&query=Shukkeien+Garden+Hiroshima" target="_blank" rel="noopener">Shukkeien-trädgården</a> eller ta en båttur på <a href="https://www.google.com/maps/search/?api=1&query=Seto+Inland+Sea" target="_blank" rel="noopener">Seto Inland Sea</a>.
+    </div>
+
+    <h3>🍣 Mat & 🍶 sake</h3>
+    <ul>
+      <li><b>Hiroshima-okonomiyaki</b> – lagrad pannkaka med nudlar; <a href="https://www.google.com/maps/search/?api=1&query=Nagata-ya+Hiroshima+Okonomiyaki">Nagata-ya</a>.</li>
+      <li><b>Ostron</b> – färska från Seto Inland Sea; prova <a href="https://www.google.com/maps/search/?api=1&query=Kakiya+Miyajima+oysters">Kakiya</a>.</li>
+      <li><b>Sakebarer</b> – särskilt i <em>Nagarekawa</em>-området.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ramen+Koh+Ryu+Hiroshima" target="_blank" rel="noopener">Ramen Koh-Ryu</a></b> – shoyu-ramen med djupt stekt vitlök & lokal sojabaserad buljong.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Menya+Always+Hiroshima" target="_blank" rel="noopener">Menya Always</a></b> – modern ramenbar med stark miso och grillade toppingar.</li>
+    </ul>
+    <p>Hiroshimas mat handlar om djupa smaker och lokal stolthet – varje rätt bär spår av stadens historia och energi.</p>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Kväll för sakebarer, men okonomiyaki populärast till lunch och middag.</div>
+
+    <div class="photo">
+        <img
+            src="https://www.researchgate.net/publication/364444595/figure/fig1/AS:11431281175221279@1689646695330/Hiroshima-Peace-Memorial-Park-map-including-the-participants-trajectory-into-the-site.jpg"
+            alt="Vy över Peace Memorial Park"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Vy över Peace Memorial Park och minnesmonumentet i Hiroshima</p>
+    </div>
+    <div class="photo">
+        <img
+            src="https://cdn.inspiringvacations.com/eyJrZXkiOiIxZDZkZWNiZi1kNzU5LTQxY2EtYWQwZS03MmMzMzU2Y2RiMWYuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwfX19"
+            alt="Hiroshima Peace Memorial Dome illuminated at night"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Hiroshima Peace Memorial Dome illuminated at night</p>
+    </div>
+    <div class="divider"></div>
+</section>
+
+<!-- MATSUYAMA -->
+<section id="matsuyama">
+    <h2>🏯 Matsuyama (5–6 dec)</h2>
+    <p class="meta">🏨 Hotell: <a href="https://www.google.com/maps/search/?api=1&query=Dogo+Onsen+Hotel+Matsuyama" target="_blank" rel="noopener">nära Dōgo Onsen</a> rekommenderas <span class="pill">klassisk onsen</span></p>
+
+    <h3>🏛️ Historia</h3>
+    <p>Matsuyama är Shikokus största stad och har varit ett kulturellt centrum i århundraden. Dōgo Onsen, en av Japans äldsta varma källor, nämns redan i 700-talets poesi. Den ikoniska huvudbyggnaden (Honkan) från 1894 är ett nationellt kulturminne och har inspirerat både konstnärer och författare. Matsuyama är starkt förknippat med haikumästaren Masaoka Shiki, som föddes här, samt Natsume Sōsekis roman <em>Botchan</em> som utspelar sig i staden. Matsuyama Castle reser sig över staden och erbjuder vyer över Inlandshavet. Idag är Matsuyama känt för sin avslappnade atmosfär, litterära arv, varma källor och välbevarade slott – en perfekt kombination av historia, kultur och vardagsnjutning.</p>
+    <div class="note">
+        <b>💡 Visste du att…</b>
+        <ul>
+            <li>Dōgo Onsen sägs ha inspirerat badhuset i Studio Ghiblis “Spirited Away”.</li>
+            <li>Haiku-poeten Masaoka Shiki moderniserade den klassiska diktformen här.</li>
+            <li>Ehime är känt som “mandarinernas prefektur” tack vare sina mikan-odlingar.</li>
+        </ul>
+    </div>
+
+    <h3>✨ Missa inte</h3>
+    <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Dogo+Onsen+Honkan" target="_blank" rel="noopener">Dōgo Onsen Honkan</a> – bada & strosa i yukata efteråt.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Matsuyama+Castle+Ehime" target="_blank" rel="noopener">Matsuyama Castle</a> – ta linbana upp för vyer.</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Dogo+shopping+street" target="_blank" rel="noopener">Dōgo Shopping Street</a> – jakoten-stånd, mikan-juice, små sakebarer.</li>
+    </ul>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Morgonbad vid Dōgo Onsen följt av slottsbesök före lunch.</div>
+
+    <div class="note">
+        <b>🌿 Om du har extra tid:</b> Ta färjan till <a href="https://www.google.com/maps/search/?api=1&query=Kure+Island+Shimanami+Kaido" target="_blank" rel="noopener">Shimanami Kaido</a> för cykling mellan öarna eller besök <a href="https://www.google.com/maps/search/?api=1&query=Ishite-ji+Temple+Matsuyama" target="_blank" rel="noopener">Ishite-ji-templet</a>.
+    </div>
+
+    <h3>🍣 Mat & 🍶 sake</h3>
+    <ul>
+      <li><b>Tai-meshi</b> – havsruda med ris, antingen rå (Uwajima-stil) eller ångad (Matsuyama-stil).</li>
+      <li><b>Jakoten</b> – friterad fiskkaka, perfekt till öl.</li>
+      <li><b>Mikan</b> – sötmandarin, serveras som juice eller glass.</li>
+      <li><b>Sake</b> – <em>Ishizuchi</em> & <em>Garyubai</em>.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Ramen+Haru+Matsuyama" target="_blank" rel="noopener">Ramen Haru</a></b> – liten ramenbar nära Dōgo Onsen med klar buljong & handgjorda nudlar.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Haruya+Ramen+Matsuyama" target="_blank" rel="noopener">Haruya Ramen</a></b> – elegant tonkotsu-ramen med Ehime-fläsk och minimalistisk inredning.</li>
+      <li><b><a href="https://www.google.com/maps/search/?api=1&query=Gyoza+no+Ohsho+Hiroshima" target="_blank" rel="noopener">Gyoza no Ohsho</a></b> – avslappnad kedja med saftiga gyoza och kalla öl, nära Hondori.</li>
+    </ul>
+    <p>Matsuyamas kök präglas av enkelhet, friskhet och havets närhet – en kulinarisk spegling av stadens lugn och värme.</p>
+    <div class="note"><b>🕓 Bästa tid på dygnet:</b> Lunch för tai-meshi, kväll för sakebarer och jakoten.</div>
+
+    <div class="photo">
+        <img
+            src="https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2018/04/Dogo-onsen-night.jpg"
+            alt="Exteriör av Dōgo Onsen Honkan i Matsuyama"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Exteriör av Dōgo Onsen Honkan i Matsuyama</p>
+    </div>
+    <div class="photo">
+        <img
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=900&h=500&s=1"
+            alt="Matsuyama Castle view from below"
+            loading="lazy"
+            onerror="setFallback(this)"
+        />
+        <p style="font-size:.85rem;color:#666;margin:.25rem 0 0 0;text-align:center;">Matsuyama Castle view from below</p>
+    </div>
+</section>
+
+<!-- PRAKTISKT -->
+<section id="praktiskt">
+    <h2>🧭 Praktiskt</h2>
+    <h3>🚆 Transport</h3>
+    <ul>
+        <li>IC-kort (<em>Suica/PASMO/ICOCA</em>) fungerar i hela rutten. Ladda i automater eller konbini.</li>
+        <li>Shinkansen: boka säten under rusning; större bagage behöver platsreservation i vissa tåg.</li>
+        <li>Stadsresor: köp dags-/helgpass i Tokyo/Osaka om ni åker mycket.</li>
+    </ul>
+
+    <h3>♨️ Onsen-etikett</h3>
+    <ul>
+        <li>Tvätta dig noggrant innan du går i vattnet. Inga badkläder.</li>
+        <li>Håret uppsatt; lilla handduken ska inte doppas i bassängen.</li>
+        <li>Kinosaki & Dōgo är generellt tolerantare med tatueringar än många andra bad.</li>
+    </ul>
+
+    <h3>🎶 Klubb & nattliv</h3>
+    <ul>
+        <li>Ta med ID. Förköp biljetter till populära kvällar (CIRCUS/JOULE).</li>
+        <li>Respektfullt bemötande uppskattas – Japan har låg konfliktnivå i krogmiljö.</li>
+        <li>Många ställen stänger först vid 04–05.</li>
+    </ul>
+
+    <div class="note">Extra kul: prova <b>standing bars</b> (“tachinomi”) i Tokyo och Osaka för snabb drink & småtugg med lokal stämning.</div>
+</section>
+
+<section id="summary">
+  <h2>🧳 Sammanfattning & tips inför resan</h2>
+  <p>Här är en snabb överblick och några sista tips inför Japanresan – perfekta att läsa på flyget.</p>
+  <h3>🎯 Måsten i varje stad</h3>
+  <ul>
+    <li><b>Tokyo:</b> teamLab Borderless, sushi på Toyosu Market, kvällsvy från Roppongi Hills.</li>
+    <li><b>Osaka:</b> Dotonbori, okonomiyaki på Ajinoya, barhopping i Hozenji Yokocho.</li>
+    <li><b>Kinosaki:</b> kvällspromenad i yukata och bad i alla sju onsen.</li>
+    <li><b>Kobe:</b> Kobe-biff på Mouriya, sakeprovning i Nada-distriktet.</li>
+    <li><b>Hiroshima:</b> Peace Park och Miyajima, okonomiyaki på Nagata-ya.</li>
+    <li><b>Matsuyama:</b> morgonbad i Dōgo Onsen, linbana upp till Matsuyama Castle.</li>
+  </ul>
+  <h3>🧦 Packlista (kortversion)</h3>
+  <ul>
+    <li>Reseadapter (typ A), paraply, tofflor till onsen, tunn handduk, powerbank.</li>
+    <li>Kontanter i yen – särskilt för små restauranger och landsbygd.</li>
+    <li>Yukata får du på ryokan, men ta gärna med badkläder för hotellens spa.</li>
+  </ul>
+</section>
+
+<section id="culture">
+  <h2>🎎 Kultur & vardag</h2>
+  <p>Japansk etikett handlar om respekt, tystnad och ordning. Små detaljer gör stor skillnad – här är några do’s & don’ts som hjälper dig smälta in:</p>
+  <ul>
+    <li>🙇‍♂️ Hälsa med lätt bugning istället för handslag.</li>
+    <li>💴 Ingen dricks! Ett “arigatō gozaimasu” räcker långt.</li>
+    <li>🚇 Tystnad på tåg – även telefonsamtal undviks.</li>
+    <li>🧹 Håll rent – det finns ofta inga soptunnor, ta med skräp hem.</li>
+    <li>🧍‍♂️ Säg “sumimasen” när du passerar någon trångt.</li>
+    <li>☕ Automatenkaffe och dryckesautomater finns överallt – testa olika smaker!</li>
+    <li>📷 Fråga gärna “shashin totte mo ii desu ka?” innan du fotograferar människor.</li>
+    <li>🕒 Punktlighet är viktigt – 5 min tidigt är lagom.</li>
+  </ul>
+</section>
+
+<section id="apps">
+  <h2>📱 Appar & verktyg</h2>
+  <p>Dessa appar och sajter gör resan enklare och roligare:</p>
+  <ul>
+    <li><b><a href="https://translate.google.com" target="_blank" rel="noopener">Google Translate</a></b> – kameraöversättning av menyer & skyltar.</li>
+    <li><b><a href="https://play.google.com/store/apps/details?id=com.navitime.inbound.walk" target="_blank" rel="noopener">Japan Travel by NAVITIME</a></b> – exaktare tågtider än Google Maps.</li>
+    <li><b><a href="https://www.hyperdia.com/" target="_blank" rel="noopener">HyperDia</a></b> – klassikern för JR-tågresor & kostnadsberäkning.</li>
+    <li><b><a href="https://apps.apple.com/jp/app/suica/id1156876146" target="_blank" rel="noopener">Suica / PASMO app</a></b> – digitalt tågkort i mobilen.</li>
+    <li><b><a href="https://paypay.ne.jp/" target="_blank" rel="noopener">PayPay</a></b> – mobilbetalning, används överallt.</li>
+    <li><b><a href="https://www.tabiko.com/" target="_blank" rel="noopener">Tabiko</a></b> – japansk reseassistent med chatt.</li>
+    <li><b><a href="https://www.japan.travel/en/plan/" target="_blank" rel="noopener">Japan Travel (JNTO)</a></b> – officiell turistguide.</li>
+  </ul>
+</section>
+
+<section id="must-eat">
+  <h2>🍜 Måste äta minst en gång</h2>
+  <ul>
+    <li><b>Ramen</b> 🍥 – finns överallt, varje region har sin egen stil.</li>
+    <li><b>Okonomiyaki</b> 🥞 – japansk pannkaka med sås & kål, Osaka-stolthet.</li>
+    <li><b>Takoyaki</b> 🐙 – varma bläckfiskbollar med majonnäs & bonito.</li>
+    <li><b>Sashimi & sushi</b> 🍣 – färskast i Toyosu och vid kusten.</li>
+    <li><b>Wagyu</b> 🥩 – Kobe- eller Matsusaka-biff, smälter i munnen.</li>
+    <li><b>Onigiri</b> 🍙 – risbollar i konbini, perfekt mellanmål på tåg.</li>
+    <li><b>Taiyaki</b> 🐟 – fiskformad våffla fylld med söt bönpasta.</li>
+    <li><b>Sake & Umeshu</b> 🍶 – japansk risvin & plommonlikör, perfekt kvällsdrink.</li>
+  </ul>
+</section>
+
+<footer>
+    © 2025 Japan-guiden • Skapad för Johan Larsson • Bilder har fallback-länkar ifall Wikimedia inte laddar.
+</footer>
+
+</body>
+</html>
